@@ -1,0 +1,9 @@
+[proxycheck]
+clave_proxycheck_1
+clave_proxycheck_2
+clave_proxycheck_3
+
+[scamalytics]
+usuario1:clave_scamalytics_1
+usuario2:clave_scamalytics_2
+usuario3:clave_scamalytics_3
