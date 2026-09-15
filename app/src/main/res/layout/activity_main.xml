@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_black">
+
+    <LinearLayout
+        android:id="@+id/ipBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#121212"
+        android:padding="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvScoreBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="●"
+            android:textColor="@color/accent_yellow"
+            android:textSize="14sp"
+            android:paddingEnd="6dp" />
+
+        <TextView
+            android:id="@+id/tvVpnStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🌐 Verificando red y reputación..."
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/btnRefreshIp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔄"
+            android:padding="4dp"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@color/card_dark"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mosk"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnSettingsTop"
+            android:layout_width="38dp"
+            android:layout_height="36dp"
+            android:text="⚙️"
+            android:textSize="13sp"
+            android:backgroundTint="#2C2C2E"
+            android:textColor="@color/text_primary" />
+
+        <Button
+            android:id="@+id/btnProfilesSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Perfiles"
+            android:textSize="12sp"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="#2C2C2E"
+            android:textColor="@color/text_primary" />
+
+        <Button
+            android:id="@+id/btnFlashTop"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="⚡ Flash"
+            android:textSize="12sp"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="#F5A623"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/btnCreateProfileTop"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="+ Nuevo"
+            android:textSize="12sp"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="@color/accent_purple"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/profilesScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvEmptyMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sin perfiles todavía"
+                android:textColor="@color/text_secondary"
+                android:textSize="18sp"
+                android:layout_marginBottom="24dp" />
+
+            <ScrollView
+                android:id="@+id/scrollProfiles"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="gone">
+                <LinearLayout
+                    android:id="@+id/llProfilesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnFlashSessionBig"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="⚡ Sesión Flash"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:backgroundTint="#F5A623"
+                    android:layout_marginEnd="6dp" />
+
+                <Button
+                    android:id="@+id/btnNewProfileBig"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="+ Nuevo perfil"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/accent_purple" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/browserScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="#151515"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvActiveBadge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Perfil Activo"
+                    android:textColor="@color/accent_green"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnMinimize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="Minimizar"
+                    android:textSize="11sp"
+                    android:backgroundTint="#2C2C2E"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginEnd="6dp" />
+
+                <Button
+                    android:id="@+id/btnClean"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="Clean"
+                    android:textSize="11sp"
+                    android:backgroundTint="@color/accent_red"
+                    android:textColor="@color/text_primary" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/webViewContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

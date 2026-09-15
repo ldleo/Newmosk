@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/bg_card">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregar proxy"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de proxy"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:layout_marginBottom="6dp" />
+
+        <RadioGroup
+            android:id="@+id/rgProxyType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <RadioButton
+                android:id="@+id/rbHttp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="HTTP"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rbHttps"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="HTTPS"
+                android:textColor="@color/text_primary"
+                android:checked="true"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rbSocks5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SOCKS5"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rbSocks4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SOCKS4"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etProxyServer"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:hint="Servidor (ej. 45.10.20.30)"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etProxyPort"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:hint="Puerto (ej. 8080)"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="13sp"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etProxyUser"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:hint="Usuario (opcional - Residencial)"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etProxyPass"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:hint="Contraseña (opcional)"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="13sp"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btnTestProxy"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="🧪 Probar Proxy"
+            android:textSize="12sp"
+            android:backgroundTint="#2C2C2E"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:id="@+id/tvProxyTestResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="12sp"
+            android:paddingTop="6dp"
+            android:paddingBottom="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btnClearProxy"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="Quitar proxy"
+                android:textSize="12sp"
+                android:backgroundTint="#2C2C2E"
+                android:textColor="@color/accent_red"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btnSaveProxy"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="GUARDAR"
+                android:textSize="12sp"
+                android:backgroundTint="@color/accent_purple"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnCancelProxyDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CANCELAR"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>
