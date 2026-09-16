@@ -139,7 +139,7 @@ class MainActivity : AppCompatActivity() {
                     if (sec == "s") s.add(trim)
                 }
             }
-        } catch (_: Exception) {}
+        } catch (e: Exception) {}
         return Pair(p, s)
     }
 
@@ -204,7 +204,7 @@ class MainActivity : AppCompatActivity() {
                                         break
                                     }
                                 }
-                            } catch (_: Exception) {
+                            } catch (e: Exception) {
                                 // Fallback a la siguiente key
                             }
                         }
@@ -233,7 +233,7 @@ class MainActivity : AppCompatActivity() {
                                     }
                                 }
                             }
-                        } catch (_: Exception) {
+                        } catch (e: Exception) {
                             // Fallback a la siguiente key
                         }
                     }
